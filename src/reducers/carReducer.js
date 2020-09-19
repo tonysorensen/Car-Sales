@@ -9,7 +9,6 @@ const initialState = {
 };
 
 export const carReducer = (state = initialState, action) => {
-  return {
-    state,
-  };
+  console.log("carReducer state", state);
+  return state;
 };
