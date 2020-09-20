@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Header = (props) => {
-  console.log("props from Header", props);
+  // console.log("props from Header", props);
   return (
     <>
       <figure className="image is-128x128">
@@ -15,11 +15,11 @@ const Header = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log("state from mapStateToProps in Header", state);
+  // console.log("state from mapStateToProps in Header", state);
   return {
-    image: state.carReducer.car.image,
-    name: state.carReducer.car.name,
-    price: state.carReducer.car.price,
+    image: state.car.image,
+    name: state.car.name,
+    price: state.car.price,
   };
 };
 

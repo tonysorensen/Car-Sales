@@ -5,11 +5,11 @@ import App from "./App";
 import "bulma/css/bulma.css";
 import "./styles.scss";
 
-import { rootReducer } from "./reducers";
+import { stateReducer } from "./reducers";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-const store = createStore(rootReducer);
+const store = createStore(stateReducer);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(

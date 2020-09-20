@@ -1,8 +1,9 @@
 export const ADD_FEATURE = "ADD_FEATURE";
 
-export const addFeature = (added_feature) => {
+export const addFeature = (newFeature) => {
+  console.log("action fired");
   return {
     type: ADD_FEATURE,
-    payload: added_feature,
+    payload: newFeature,
   };
 };

@@ -1,9 +1,10 @@
 import React from "react";
 import AdditionalFeature from "./AdditionalFeature";
 import { connect } from "react-redux";
+import { addFeature } from "../actions/addFeature";
 
 const AdditionalFeatures = (props) => {
-  console.log("props from AdditionalFeatures", props);
+  // console.log("props from AdditionalFeatures", props);
   return (
     <div className="content">
       <h4>Additional Features</h4>
@@ -21,10 +22,11 @@ const AdditionalFeatures = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  console.log("state from mapStateToProps in AdditionalFeatures", state);
+  // console.log("state from mapStateToProps in AdditionalFeatures", state);
   return {
-    additionalFeatures: state.additionalFeaturesReducer.additionalFeatures,
+    car: state.car.features,
+    additionalFeatures: state.additionalFeatures,
   };
 };
 
-export default connect(mapStateToProps, {})(AdditionalFeatures);
+export default connect(mapStateToProps, { addFeature })(AdditionalFeatures);
