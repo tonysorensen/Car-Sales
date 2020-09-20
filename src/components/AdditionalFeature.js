@@ -7,6 +7,7 @@ const AdditionalFeature = (props) => {
   const handleClick = (e) => {
     e.preventDefault();
     props.addFeature(props.feature);
+    // console.log(props.feature.price);
   };
 
   return (

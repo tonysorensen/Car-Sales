@@ -9,7 +9,10 @@ import { stateReducer } from "./reducers";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-const store = createStore(stateReducer);
+const store = createStore(
+  stateReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
