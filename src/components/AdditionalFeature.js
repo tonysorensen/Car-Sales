@@ -3,7 +3,7 @@ import { addFeature } from "../actions/addFeature";
 import { connect } from "react-redux";
 
 const AdditionalFeature = (props) => {
-  console.log("props in additonalFeature", props);
+  // console.log("props in additonalFeature", props);
   const handleClick = (e) => {
     e.preventDefault();
     props.addFeature(props.feature);
